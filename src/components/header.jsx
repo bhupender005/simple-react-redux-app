@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 
-export default class Header extends React.Component{
-  state = {
-    user: 'Bhupender'
-  }
+export default class Header extends Component{
 
   componentDidMount() {
     console.log("I mounted !");
@@ -11,7 +8,7 @@ export default class Header extends React.Component{
 
   render () {
     return (
-      <h1>Hello {this.state.user}!</h1>
+      <h1>Hello {this.props.children}!</h1>
     )
   }
 }

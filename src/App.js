@@ -2,8 +2,12 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import CustomHeader from './components/header';
+import Body from './components/body';
 
 class App extends Component {
+  state = {
+    heading: 'Bhupender'
+  }
   render() {
     return (
       <div className="App">
@@ -14,7 +18,8 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-        <CustomHeader />
+        <Body />
+        <CustomHeader>{this.state.heading}</CustomHeader>
       </div>
     );
   }
