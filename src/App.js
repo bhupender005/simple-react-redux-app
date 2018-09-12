@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import CustomHeader from './components/header';
 import Body from './components/body';
+import UserList from './containers/user-list';
 
 class App extends Component {
   state = {
@@ -20,6 +21,13 @@ class App extends Component {
         </p>
         <Body />
         <CustomHeader>{this.state.heading}</CustomHeader>
+
+        <hr />
+        <h2>User List:</h2>
+        <UserList />
+        <hr />
+        <h2>User Details:</h2>
+
       </div>
     );
   }
